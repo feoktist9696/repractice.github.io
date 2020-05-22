@@ -121,4 +121,5 @@ function blurScreen() {
 
 function removeBlur() {
   document.body.style.filter = 'blur(0px)';
+  Notification.close();
 }
