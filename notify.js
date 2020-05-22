@@ -17,6 +17,7 @@ function notifyUser() {
   var notification = new Notification('Correct your posture, please.', {
    icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
    body: 'Correct posture make your health better!',
+   requireInteraction: true,
   });
   notification.onclick = function() {
    window.open('https://tatradev.github.io/');
