@@ -10,16 +10,16 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-function notifyMe() {
+function notifyUser() {
  if (Notification.permission !== 'granted')
   Notification.requestPermission();
  else {
-  var notification = new Notification('Notification title', {
+  var notification = new Notification('Correct your posture, please.', {
    icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
-   body: 'Hey there! You\'ve been notified!',
+   body: 'Correct posture make your health better!',
   });
   notification.onclick = function() {
-   window.open('http://stackoverflow.com/a/13328397/1269037');
+   window.open('https://tatradev.github.io/');
   };
  }
 }
