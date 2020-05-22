@@ -113,7 +113,8 @@ function drawEyes()  {
   }
 }
 
-function blurScreen() { 
+function blurScreen() {
+  notifyMe();
   document.body.style.filter = 'blur(10px)';
   document.body.style.transition= '0.9s';
 }
