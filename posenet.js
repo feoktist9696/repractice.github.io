@@ -3,32 +3,6 @@ let poseNet;
 let poses = [];
 var started = false;
 
-// request permission on page load
-document.addEventListener('DOMContentLoaded', function() {
- if (!Notification) {
-  alert('Desktop notifications not available in your browser. Try Chromium.');
-  return;
- }
-
- if (Notification.permission !== 'granted')
-  Notification.requestPermission();
-});
-
-
-function notifyMe() {
- if (Notification.permission !== 'granted')
-  Notification.requestPermission();
- else {
-  var notification = new Notification('Notification title', {
-   icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
-   body: 'Hey there! You\'ve been notified!',
-  });
-  notification.onclick = function() {
-   window.open('http://stackoverflow.com/a/13328397/1269037');
-  };
- }
-}
-
 function setup() {
   const canvas = createCanvas(640, 480); // or use to make fullscreen canvas window.innerWidth, window.innerHeight, but you should to change the formula in changeFontSize()
   canvas.parent('videoContainer');
@@ -140,7 +114,7 @@ function drawEyes()  {
 }
 
 function blurScreen() {
-  notifyMe();
+  notifyUser();
   document.body.style.filter = 'blur(10px)';
   document.body.style.transition= '0.9s';
 }
