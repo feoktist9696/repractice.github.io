@@ -114,13 +114,12 @@ function drawEyes()  {
 }
 
 function blurScreen() {
-  notifyUser();
   document.body.style.filter = 'blur(10px)';
   document.body.style.transition= '0.9s';
-  Notification.close();
+  notification = notifyUser();
+  notification.close();
 }
 
 function removeBlur() {
   document.body.style.filter = 'blur(0px)';
-  Notification.close();
 }
