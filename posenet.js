@@ -117,6 +117,7 @@ function blurScreen() {
   notifyUser();
   document.body.style.filter = 'blur(10px)';
   document.body.style.transition= '0.9s';
+  Notification.close();
 }
 
 function removeBlur() {
