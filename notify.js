@@ -22,5 +22,6 @@ function notifyUser() {
   notification.onclick = function() {
    window.open('https://tatradev.github.io/');
   };
+  return notification;
  }
 }
